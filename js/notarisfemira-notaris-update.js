@@ -295,7 +295,7 @@ $(document).ready(function (){
 		});	
 	}
 
-	function delete_session_pengurusan_berkas_db(varUid) {
+	function delete_session_perngurusan_berkas_db(varUid) {
 		$.ajax({
 			url : 'modules/notaris/process_hapus_pengurusan_berkas_upd.php',
 			type : 'GET',
@@ -305,7 +305,7 @@ $(document).ready(function (){
 			success : function(data) {
 				if(data == 'true') {
 					$("#data_pengurusan_berkas_db").html('');
-					load_success_pengurusan_berkas_session();
+					load_data_pengurusan_berkas_notaris();
 				}
 			},
 			error : function(data) {
@@ -458,7 +458,7 @@ $(document).ready(function (){
 					for (var i = 0; i < dataPengurusanBerkas.length; i++) {
 						var dataObjectToEdit = JSON.stringify(dataPengurusanBerkas[i]).replace(/'/g, "\\'");
 						console.log(dataObjectToEdit);
-						$("#data_pengurusan_berkas_db").append("<div class='row'><div class='col-sm-2'> <div class='form-group'> <input type='hidden' name='id_urus_berkas[]' value='"+ dataPengurusanBerkas[i].id_berkas +"' class='form-control input-sm' readonly='readonly'/> <input type='text' name='nama_urus_berkas[]' title='"+ dataPengurusanBerkas[i].nama_berkas +"' value='"+ dataPengurusanBerkas[i].nama_berkas +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <input type='text' name='nomor_bpn[]' value='"+ dataPengurusanBerkas[i].nomor_bpn +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <input type='text' name='tgl_berkas[]' value='"+ dataPengurusanBerkas[i].tgl_berkas +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <input type='text' name='tgl_selesai[]' value='"+ dataPengurusanBerkas[i].tgl_selesai +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'><input type='hidden' name='id_bagian_lapangan[]' value='"+ dataPengurusanBerkas[i].id_bagian_lapangan +"' class='form-control input-sm' readonly='readonly'/> <input type='text' name='bagian_lapangan[]' value='"+ dataPengurusanBerkas[i].fullname +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <div class='btn-group'><a href='#' id='hapus_pengurusan_berkas_session' data-urusberkas-id='" + dataPengurusanBerkas[i].id + "' class='btn btn-danger btn-sm'><span class='fa fa-times'></span></a> <a href='#' id='edit_field_pengurusan_berkas' data-urusberkas='" + dataObjectToEdit + "' class='btn btn-primary btn-sm'><span class='fa fa-pencil'></span></a></div> </div></div></div>");
+						$("#data_pengurusan_berkas_db").append("<div class='row'><div class='col-sm-2'> <div class='form-group'> <input type='hidden' name='id_urus_berkas[]' value='"+ dataPengurusanBerkas[i].id_berkas +"' class='form-control input-sm' readonly='readonly'/> <input type='text' name='nama_urus_berkas[]' title='"+ dataPengurusanBerkas[i].nama_berkas +"' value='"+ dataPengurusanBerkas[i].nama_berkas +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <input type='text' name='nomor_bpn[]' value='"+ dataPengurusanBerkas[i].nomor_bpn +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <input type='text' name='tgl_berkas[]' value='"+ dataPengurusanBerkas[i].tgl_berkas +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <input type='text' name='tgl_selesai[]' value='"+ dataPengurusanBerkas[i].tgl_selesai +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'><input type='hidden' name='id_bagian_lapangan[]' value='"+ dataPengurusanBerkas[i].id_bagian_lapangan +"' class='form-control input-sm' readonly='readonly'/> <input type='text' name='bagian_lapangan[]' value='"+ dataPengurusanBerkas[i].fullname +"' class='form-control input-sm' readonly='readonly'/> </div></div><div class='col-sm-2'> <div class='form-group'> <div class='btn-group'><a href='#' id='hapus_pengurusan_berkas_db' data-urusberkas-id='" + dataPengurusanBerkas[i].id + "' class='btn btn-danger btn-sm'><span class='fa fa-times'></span></a> <a href='#' id='edit_field_pengurusan_berkas' data-urusberkas='" + dataObjectToEdit + "' class='btn btn-primary btn-sm'><span class='fa fa-pencil'></span></a></div> </div></div></div>");
 					};
 				},
 				error : function(data) {
