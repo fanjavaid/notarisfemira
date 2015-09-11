@@ -123,7 +123,7 @@
 		<td><?php echo $data['debiturName']; ?></td>
 		<td><?php echo $data['tgl_masuk']; ?></td>
 		<td><?php echo $data['tgl_penyerahan']; ?></td>
-		<td><?php echo ($data['status'] == "0") ? "<font color=#ccc>On Process</font>" : "<font color='#0099ff' class='finish_status' id='example' data-toggle='tooltip' data-placement='top' title='Tgl.Selesai $tglSelesai'>Finish</font>" ?></td>
+		<td><?php echo ($data['status'] == "0") ? "<font color=#ccc>On Process</font>" : "<font color='#0099ff' class='finish_status' id='example'>Finish</font>" ?></td>
 		<td class="menu-table">
 			<a href="main.php?module=notaris&menu=update&idNotaris=<?php echo $data['idNotaris'] ?>" title="Edit"><span class="glyphicon glyphicon-pencil"></span></a>
 			<a href="#" class="link-modal" id="delete" data-id="<?php echo $data['idNotaris'] ?>" title="Delete"><span class="glyphicon glyphicon-remove red"></span></a>
