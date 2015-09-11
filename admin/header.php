@@ -26,10 +26,6 @@
 
     <script src="../js/jquery-1.11.3.min.js"></script>
 
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/transition.js"></script>
-    <script src="../js/tooltip.js"></script>
-
     <!-- Input Mask-->
     <script src="../js/vanilla-masker.min.js"></script>
 
