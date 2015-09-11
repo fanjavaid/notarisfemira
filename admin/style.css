@@ -1,0 +1,25 @@
+.pagination {
+	text-align: center;
+}
+
+.red {
+	color : #e74c3c;
+}
+.green {
+	color : #2ecc71;
+}
+
+.gray {
+	color : #cccccc;
+}
+
+.jumbotron {
+	margin:0;
+	background: none;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus {
+	color: #3276b1;
+}
