@@ -117,5 +117,5 @@
 	unset($_SESSION['berkas']);
 	unset($_SESSION['sertifikat']);
 	unset($_SESSION['urus_berkas']);
-	// echo "<META http-equiv=\"refresh\" content=\"0;URL=main.php?module=notaris&menu=home\">";
+	echo "<META http-equiv=\"refresh\" content=\"0;URL=main.php?module=notaris&menu=home\">";
 ?>

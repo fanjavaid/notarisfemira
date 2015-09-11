@@ -1,11 +1,4 @@
 <?php include "header.php"; ?>
-<?php 
-	echo "Debug : <br />";
-	print_r($_SESSION['sertifikat']);
-	print_r($_SESSION['berkas']);
-	print_r($_SESSION['urus_berkas']);
-	// session_destroy();
-?>
 <style>
 	#field-berkas {
 		margin-bottom: 5px;
