@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 <?php //print_r($_SESSION['sertifikat_upd'])
-	session_destroy();
+	//session_destroy();
 ?>
 <script type="text/javascript" src="../js/notarisfemira-notaris-update.js"></script>
 
@@ -288,6 +288,19 @@
 	</div>
 
 	<div class="form-group">
+		<label for="">Pemberkasan</label>
+		<select name="pemberkasan" class="form-control" required>
+			<option value="">Pilih</option>
+			<?php
+				foreach ($res as $data) {
+					$selected = ($dataNotaris['id_kar_pemberkasan'] == $data['karUid'])? "selected" : "";
+					echo "<option value='$data[karUid]' $selected>$data[fullname]</option>";
+				}
+			?>
+		</select>
+	</div>
+
+	<div class="form-group">
 		<label for="">Input Data</label>
 		<select name="bag_input" class="form-control">
 			<option value="">Pilih</option>
@@ -316,7 +329,8 @@
 	<!-- </div> -->
 
 	<?php $visible = ($dataNotaris['status'] == 1)? "block" : "none"; ?>
-	<div class="form-group" style="display:<?php echo $visible; ?>">
+	<div class="form-group" style="display:none">
+	<!--<div class="form-group" style="display:<?php echo $visible; ?>">-->
 		<label>Tanggal Selesai</label>
 		<input type="text" name="tgl_selesai" class="form-control" value="<?php echo $dataNotaris['tgl_selesai']; ?>" readonly="readonly" />
 	</div>
