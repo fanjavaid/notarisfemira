@@ -23,3 +23,7 @@
 .navbar-default .navbar-nav>.active>a:focus {
 	color: #3276b1;
 }
+.table-notaris .row {
+	margin-right: 0px;
+    margin-left: 0px;
+}
