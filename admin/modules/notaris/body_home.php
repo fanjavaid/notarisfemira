@@ -95,7 +95,7 @@
 
 <br>
 
-<div class="table-responsive">
+<div class="table-responsive table-notaris">
 <table id="example2" class="table table-striped table-hover mytable">
 	<thead>
 		<tr>
