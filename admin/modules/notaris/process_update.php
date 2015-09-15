@@ -14,6 +14,7 @@
 
 	$id_notaris 		= $_POST['idNotaris'];
 	$debitur			= $_POST['debitur'];
+	$tgl_akad			= $_POST['tgl_akad'];
 	$pemberi_order		= $_POST['pemberi_order'];
 	$pemberkasan 		= $_POST['pemberkasan'];
 	$bag_input 			= $_POST['bag_input'];
@@ -27,7 +28,8 @@
 	*/
 	$data_master 	= array(
 		'id_debitur'			=> $debitur, 
-		'id_reff_order'			=> $pemberi_order, 
+		'id_reff_order'			=> $pemberi_order,
+		'tgl_akad'				=> $tgl_akad,
 		'id_kar_pemberkasan'	=> $pemberkasan, 
 		'id_kar_input'			=> $bag_input, 
 		'id_kar_lapangan'		=> 0, // Not used and will be removed
@@ -65,7 +67,7 @@
 				'created_at' => date('Y-m-d')
 			);
 
-			print_r($data_berkas);
+			// print_r($data_berkas);
 
 			$db->insert('tb_notaris_berkas', $data_berkas);
 			$res = $db->getResult();
@@ -94,7 +96,7 @@
 				'created_at' => date('Y-m-d')
 			);
 
-			print_r($data_urus_berkas);
+			// print_r($data_urus_berkas);
 
 			$db->insert('tb_notaris_pengurusanberkas', $data_urus_berkas);
 			$res = $db->getResult();
@@ -119,7 +121,7 @@
 				'created_at' => date('Y-m-d')
 			);
 
-			print_r($data_sertifikat);
+			// print_r($data_sertifikat);
 
 			$db->insert('tb_notaris_sertifikat', $data_sertifikat);
 			$res = $db->getResult();
