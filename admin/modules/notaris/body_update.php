@@ -262,6 +262,11 @@
 		<div id="data_sertifikat"></div>
 	</div>
 
+	<div class="form-group">
+		<label for="">Tanggal Akad</label>
+		<input type="text" name="tgl_akad" class="form-control datepicker" value="<?php echo $dataNotaris['tgl_akad'] ?>" />	
+	</div>
+
 	<!-- Jenis Berkas -->
 	<div class="form-group">
 		<label for="jenis_berkas">Jenis Berkas</label><br/>

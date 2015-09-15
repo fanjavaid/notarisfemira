@@ -1,4 +1,5 @@
 <?php include "header.php"; ?>
+<?php print_r($_SESSION['sertifikat']) ?>
 <style>
 	#field-berkas {
 		margin-bottom: 5px;
@@ -417,6 +418,11 @@
 		<p></p>
 		<div id="data_sertifikat">
 		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="">Tanggal Akad</label>
+		<input type="text" name="tgl_akad" class="form-control datepicker" />	
 	</div>
 
 	<!-- Jenis Berkas -->

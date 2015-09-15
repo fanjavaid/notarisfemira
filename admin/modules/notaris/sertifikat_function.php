@@ -1,6 +1,6 @@
 <?php
 	function tambah_sertifikat($nomor, $id_kabupaten, $id_kecamatan){
-		if($nomor < 1) return;
+		// if($nomor < 1) return;
 	 
 		if(@is_array($_SESSION['sertifikat'])){
 			if (sertifikat_exists($nomor)) return;
@@ -20,7 +20,7 @@
 	}
 
 	function sertifikat_exists($nomor){
-		$nomor = intval($nomor);
+		// $nomor = intval($nomor);
 		$max = count($_SESSION['sertifikat']);
 		$flag = 0;
 		for($i = 0;$i < $max;$i++){
@@ -34,7 +34,7 @@
 
 
 	function tambah_sertifikat_update($nomor, $id_kabupaten, $id_kecamatan){
-		if($nomor < 1) return;
+		// if($nomor < 1) return;
 	 
 		if(@is_array($_SESSION['sertifikat'])){
 			if (sertifikat_exists_update($nomor)) return;
@@ -54,7 +54,7 @@
 	}
 
 	function sertifikat_exists_update($nomor){
-		$nomor = intval($nomor);
+		// $nomor = intval($nomor);
 		$max = count($_SESSION['sertifikat']);
 		$flag = 0;
 		for($i = 0;$i < $max;$i++){
