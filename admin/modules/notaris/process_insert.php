@@ -9,7 +9,8 @@
 
 	$debitur		= $_POST['debitur'];
 	$pemberi_order	= $_POST['pemberi_order'];
-	$pemberkasan 	= $_POST['pemberkasan'];
+	// $pemberkasan 	= $_POST['pemberkasan'];
+	$pemberkasan 	= 0;
 	$tgl_akad 		= $_POST['tgl_akad'];
 	$bag_input 		= $_POST['bag_input'];
 	$tgl_input 		= $_POST['tgl_input'];
