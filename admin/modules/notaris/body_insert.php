@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-<?php print_r($_SESSION['sertifikat']) ?>
+<?php //print_r($_SESSION['sertifikat']) ?>
 <style>
 	#field-berkas {
 		margin-bottom: 5px;
@@ -448,7 +448,7 @@
 		$res = $db->getResult();
 	?>
 
-	<div class="form-group">
+	<!-- <div class="form-group">
 		<label for="">Pemberkasan</label>
 		<select name="pemberkasan" class="form-control" required>
 			<option value="">Pilih</option>
@@ -458,7 +458,7 @@
 				}
 			?>
 		</select>
-	</div>
+	</div> -->
 
 	<div class="form-group">
 		<label for="">Input Data</label>
@@ -523,7 +523,7 @@
 					<div class="form-group">
 						<select name="id_kabupaten" id="kabupaten" class="form-control">
 							<?php
-								$db->select('tb_kabupaten','*', null, 'id_prov = 31 OR id_prov = 36', null, null);
+								$db->select('tb_kabupaten','*', null, null, null, null);
 								$res = $db->getResult();
 								foreach ($res as $data) {
 									echo "<option value='$data[id_kab]'>$data[nama_kab]</option>";

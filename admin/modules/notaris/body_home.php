@@ -50,7 +50,7 @@
 	}
 
 	$query = "
-		select a.uid as idNotaris, a.status, a.tgl_masuk, a.tgl_penyerahan, a.tgl_selesai,
+		select a.uid as idNotaris, a.status, a.tgl_masuk, a.tgl_akad, a.tgl_penyerahan, a.tgl_selesai,
 		b.fullname as debiturName, e.fullname as pemberkasanName, f.fullname as karInput, g.fullname as karLapangan
 		from tb_notaris a
 		left join tb_debitur c on a.id_debitur = c.uid
@@ -62,7 +62,9 @@
 		left join tb_profil f on d1.profil_id = f.uid
 		left join tb_profil g on d2.profil_id = g.uid
 		$condition
+		ORDER BY a.uid DESC
 	";
+	// echo $query;
 	$sql = mysql_query($query);
 ?>
 
@@ -100,9 +102,10 @@
 	<thead>
 		<tr>
 			<th width="10px">No.</th>
-			<th>Debitur</th>
+			<th>Nama Debitur</th>
 			<th width="150px">Tgl. Masuk</th>
-			<th width="150px">Tgl. Penyerahan</th>
+			<th width="150px">Tgl. Akad</th>
+			<th width="150px">Tgl. Selesai</th>
 			<th width="100px">Status</th>
 			<th width="50px">Action</th>
 		</tr>
@@ -122,7 +125,8 @@
 		<td><?php echo $i; ?></td>
 		<td><?php echo $data['debiturName']; ?></td>
 		<td><?php echo $data['tgl_masuk']; ?></td>
-		<td><?php echo $data['tgl_penyerahan']; ?></td>
+		<td><?php echo $data['tgl_akad']; ?></td>
+		<td><?php echo ($data['tgl_selesai'] = '0000-00-00')? "Not Yet" : $data['tgl_selesai']; ?></td>
 		<td><?php echo ($data['status'] == "0") ? "<font color=#ccc>On Process</font>" : "<font color='#0099ff' class='finish_status' id='example'>Finish</font>" ?></td>
 		<td class="menu-table">
 			<a href="main.php?module=notaris&menu=update&idNotaris=<?php echo $data['idNotaris'] ?>" title="Edit"><span class="glyphicon glyphicon-pencil"></span></a>
